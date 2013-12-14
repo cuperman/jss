@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JSS Example</title>
+        <!--<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" />-->
+        <script src="js/jquery-1.10.2.js"></script>
+        <script src="js/underscore.js"></script>
+        <script src="../src/watcher.js"></script>
+        <script src="../src/jss.js"></script>
+        <script src="js/styles/typography.js"></script>
+        <script>
+            $(document).ready(function() {
+                jss.style().watch();
+
+                // Add dynamic content
+
+                setTimeout(function() {
+                    $("#headings").append("<h5>h5: Heading<\/h5>");
+                }, 1000);
+
+                setTimeout(function() {
+                    $("#headings").append("<h6>h6: Heading<\/h6>");
+                }, 2000);
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Typography</h1>
+
+        <h2>Headings</h2>
+        <div id="headings" class="example">
+            <h1>h1: Heading</h1>
+            <h2>h2: Heading</h2>
+            <h3>h3: Heading</h3>
+            <h4>h4: Heading</h4>
+            <!--<h5>h5: Heading</h5>-->
+            <!--<h6>h6: Heading</h6>-->
+        </div>
+    </body>
+</html>
