@@ -13,11 +13,11 @@
         },
 
         style: function(context) {
-            _.each(_private.styles, function(styleDefs, selector) {
+            _.each(_private.styles, function(declarations, selector) {
                 var $el = $(selector, context);
 
-                _.each(styleDefs, function(value, attr) {
-                    $el.css(attr, value);
+                _.each(declarations, function(value, property) {
+                    $el.css(property, value);
                 });
             });
 
